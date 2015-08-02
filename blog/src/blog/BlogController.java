@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Blogを操作するビジネスロジック
- * 
+ *
  * @author Shinji Miyamoto
  */
 public class BlogController {
@@ -28,7 +28,7 @@ public class BlogController {
 
     /**
      * このクラスのインスタンスを取得します。
-     * 
+     *
      * @return BlogControllerのインスタンス
      */
     public static BlogController getInstance() {
@@ -43,16 +43,14 @@ public class BlogController {
      * @param topic トピック
      */
     public void postTopic(Topic topic) {
-        synchronized (this) {
-            topic.setId(idCounter++);
-            topic.setPostDate(new Date());//現在時間
-            topics.add(topic);
-        }
+        topic.setId(idCounter++);
+        topic.setPostDate(new Date());//現在時間
+        topics.add(topic);
     }
 
     /**
      * 最近の(というか全部の)トピックを取得します。
-     * 
+     *
      * @return トピックのリスト
      */
     public List<Topic> getTopics() {

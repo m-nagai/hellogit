@@ -8,7 +8,7 @@ import java.util.Date;
 public class Topic {
 
 	/** 連番 */
-	private int id;	
+	private int id;
 	/** タイトル */
 	private String title;
 	/** 内容 */
@@ -24,8 +24,8 @@ public class Topic {
 			+ ",postDate=" + postDate
 			;
 	}
-	
-	
+
+
 	//
 	//単純なセッタ、ゲッタ
 	//
@@ -54,3 +54,4 @@ public class Topic {
 		this.title = title;
 	}
 }
+
